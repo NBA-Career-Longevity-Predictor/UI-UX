@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="script/switch.js"></script>
+    <script src="script/fixHeight.js"></script>
 </head>
 <body id="body" class="light-mode">
     <!--[if lt IE 7]>
@@ -17,57 +17,105 @@
     <![endif]-->
 
     <div class="container">
-        <section class="hero">
-            <img src="img/hero2.jpg" />
+       
+
+        <!-- <section id="myHero" class="hero">
+            <img src="img/hero.jpg" /> -->
+            
+           
         </section>
 
-        <header>
+        <header id="myHeader">     
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Start</a>
+                <a href="#">Contact</a>
+                <a href="#">NBA</a>
+            </nav>
+
+
+        <div class = "info">
             <div>
-                <h1>NBA CAREER LONGEVITY APP</h1>
+                <h1>Longevitus</h1>
             </div>
 
             <div>
                 <button>Learn More</button>
             </div>
+        </div>
+            
         </header>
 
         <section class="main-content">
             <div class="main-wrap">
-                    <h2>About</h2><br>
-                    <div class="about">
-                        
-                        <div class="box">
-                            <h3>About Blah</h3>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga doloribus labore dolorem, cumque soluta tempore tenetur dicta hic. Veniam, fugit voluptates! Eligendi obcaecati excepturi, magni ad non eos magnam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi harum rerum quae culpa, cupiditate inventore voluptate incidunt ab recusandae sint voluptatibus deleniti magnam, vitae quisquam? Rem minus non esse eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quas laboriosam odit a saepe alias ad non aliquam deserunt! Sit excepturi beatae doloremque possimus, quibusdam nihil adipisci dolores deserunt reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus velit magnam dicta doloremque fugiat, cupiditate, commodi ipsam blanditiis consequuntur fugit quaerat, quibusdam ipsa? Quos aspernatur cum facere? Iste, aliquid!</p>
-                        </div>
-                        
+                <h2>Color Palette</h2>
+                <div class="colors">
+                    <div class="color" style="background: #CD9C4C">
+                        <h3>#CD9C4C</h3>
                     </div>
+                    <div class="color" style="background: #C24F69">
+                        <h3>#C24F69</h3>
+                    </div>
+                    <div class="color" style="background: #D9B7BD">
+                        <h3>#D9B7BD</h3>
+                    </div>
+                    <div class="color" style="background: #272123">
+                        <h3>#272123</h3>
+                    </div>
+                    <div class="color" style="background: #C65BB4">
+                        <h3>#C65BB4</h3>
+                    </div>
+                </div>
 
+                <h2>About</h2>
+                <br />
+                <div class="about">
+                    <div class="box">
+                        <h3>About Blah</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fuga doloribus labore
+                            dolorem, cumque soluta tempore tenetur dicta hic. Veniam, fugit voluptates! Eligendi
+                            obcaecati excepturi, magni ad non eos magnam? Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Nisi harum rerum quae culpa, cupiditate inventore voluptate incidunt ab
+                            recusandae sint voluptatibus deleniti magnam, vitae quisquam? Rem minus non esse eius! Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nemo quas laboriosam odit a saepe alias
+                            ad non aliquam deserunt! Sit excepturi beatae doloremque possimus, quibusdam nihil adipisci
+                            dolores deserunt reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nostrum accusamus velit magnam dicta doloremque fugiat, cupiditate, commodi ipsam blanditiis
+                            consequuntur fugit quaerat, quibusdam ipsa? Quos aspernatur cum facere? Iste, aliquid!
+                        </p>
+                    </div>
+                </div>
 
-                <h2>Features</h2><br>
+                <h2>Features</h2>
+                <br />
                 <div class="features">
-                    
                     <div class="box">
+                        <img src="img/graph.jpg" alt="">
                         <h3>Basketball</h3>
                         <p>We do basketball stuff.</p>
+                        <button>Learn more</button>
                     </div>
                     <div class="box">
+                            <img src="img/code.jpg" alt="">
                         <h3>Basketball</h3>
                         <p>We do basketball stuff.</p>
+                        <button>Learn more</button>
                     </div>
                     <div class="box">
+                            <img src="img/mobileapp.jpg" alt="">
                         <h3>Basketball</h3>
                         <p>We do basketball stuff.</p>
-                    </div>
-                    <div class="box">
-                        <h3>Basketball</h3>
-                        <p>We do basketball stuff.</p>
+                        <button>Learn more</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer></footer>
+        <footer>
+            <p>&copy; NBA Career Longevity Predictor</p>
+        </footer>
     </div>
 
     <script src="" async defer></script>

@@ -4,16 +4,32 @@
 @black: #050006;
 @yellow: #fbeb5d;
 
+// Neon color assignments
+@peru: #CD9C4C;
+@indianred: #C24F69;
+@thistle: #D9B7BD;
+@lightblack: #272123;
+@orchid: #C65BB4;
+
 
 // Colors
 @main1: @orange;
 
 
 //
-@containerWidth: 1200px;
 
 
 
 // Breakpoints
-@mobile: ~"(max-width: 500px)";
+@phone: ~"(max-width: 500px)";
 @tablet: ~"(max-width: 768px)";
+
+@containerWidth: 80%;
+
+@media @tablet{
+    @containerWidth: 100%;
+}
+
+@media @phone{
+    @containerWidth: 100%;
+}
