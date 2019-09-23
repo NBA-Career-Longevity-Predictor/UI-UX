@@ -1,36 +1,71 @@
 body{
-  color: @lightcolor;
+  color: black;
+  background-color: white;
 }
 
-.hero {
-    position: absolute;
-    top: 0;
-    z-index: -1;
+.hero {    
     width: 100%;
 }
 
 header{
+  color: white;
+  position: absolute;
+  top: 0;
+  z-index: 1;
   padding: 2%;
+  width: 100%;
   .flex(row, space-between, center);
 
 
   button{
-    border: 2px solid @lightcolor;
+    border: 2px solid white;
     font-size: 2rem;
     padding: 10px;
     width: 200px;
     border-radius: 25px;
     background: rgba(255, 0, 0, 0);
-    color: @lightcolor;
+    color: white;
 
-    -webkit-transition-duration: 0.7s; /* Safari */
+    -webkit-transition-duration: 0.7s;
     transition-duration: 0.7s;
   }
 
   button:hover{
-    border-color: rgba(204,132,0,.9); /* Green */
-    background-color: rgba(255,255,255,.1);
-    
+    border-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.05);    
     letter-spacing: 3px;
+  }
+}
+
+.main-content
+{
+  // remove this later
+  padding-top: 100px;
+  padding-bottom: 1000px;
+
+
+  width: 100%;
+  background-color: white;
+  color: black;
+  .flex(column, center, center);
+
+  .main-wrap{
+    width: @containerWidth;
+    .flex(column, center, center);
+
+    .features, .about{
+      .flex(row, space-between, center);
+      width: 100%;
+      margin-bottom: 100px;
+      
+      div{
+        width: 100%;
+        margin: 10px;
+        background-color: rgba(255,0,0, .2);
+      
+        .flex(column, space-between, center);
+      }
+    }
+    
   }
 }
