@@ -1,0 +1,36 @@
+body{
+  color: @lightcolor;
+}
+
+.hero {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+header{
+  padding: 2%;
+  .flex(row, space-between, center);
+
+
+  button{
+    border: 2px solid @lightcolor;
+    font-size: 2rem;
+    padding: 10px;
+    width: 200px;
+    border-radius: 25px;
+    background: rgba(255, 0, 0, 0);
+    color: @lightcolor;
+
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+  }
+
+  button:hover{
+    border-color: rgba(204,132,0,.9); /* Green */
+    background-color: rgba(255,255,255,.1);
+    
+    letter-spacing: 3px;
+  }
+}
