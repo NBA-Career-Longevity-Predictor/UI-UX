@@ -1,0 +1,209 @@
+body.light-mode {
+    color: black;
+    background-color: white;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        @media @phone {
+            font-size: 2rem;
+            margin: 25px 0 10px;
+        }
+    }
+
+    h3 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    
+    .main-content i, span{
+      color: black;
+    }
+}
+
+body.dark-mode {
+    color: white;
+    background-color: @lighterblack;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid white;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        @media @phone {
+            font-size: 2rem;
+            margin: 25px 0 10px;
+        }
+    }
+
+    h3 span {
+        background: @lighterblack;
+        padding: 0 10px;
+    }
+
+    .main-content i, span{
+      color: white;
+    }
+}
+
+header {
+    .info {
+        display: none;
+    }
+    height: 100%;
+}
+
+.main-content {
+    // remove this later
+    padding-top: 100px;
+    width: 100%;
+    .flex(column, flex-start, center);
+
+    // h3 {
+    //     width: 100%;
+    //     text-align: center;
+    //     border-bottom: 1px solid #000;
+    //     line-height: 0.1em;
+    //     margin: 50px 0 25px;
+
+    //     span {
+    //         background: #fff;
+    //         padding: 0 10px;
+    //     }
+    // }
+
+    .main-wrap {
+        width: @containerWidth;
+
+        @media @tablet {
+            width: 80%;
+        }
+
+        @media @phone {
+            width: 80%;
+        }
+
+        .team {
+            width: @containerWidth;
+            .flex(row, space-between, center);
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            margin-top: 100px;
+
+            @media @tablet {
+                .flex(row, space-evenly, center);
+                width: 100%;
+            }
+
+            @media @phone {
+                .flex(column, space-between, center);
+                width: 100%;
+                margin-bottom: 100px;
+                margin-top: 50px;
+            }
+
+            .box {
+                width: 41%;
+                margin-left: 4%;
+                margin-right: 4%;
+                margin-bottom: 10%;
+                //background: rgba(217, 183, 189, 0.274);
+                //border-radius: 10px;
+
+
+                // height: 50vh;
+
+                // background-color: #c24f6911;
+                .flex(column, space-between, center);
+
+                align-self: stretch;
+
+                div {
+                    .flex(column, space-between, center);
+                    width: 100%;
+                }
+
+                .bio{
+                    height: 100%;
+                }
+
+                @media @tablet {
+                    width: 40%;
+                    // height: 40vh;
+                }
+
+                @media @phone {
+                    .flex(column, space-between, center);
+                    width: 100%;
+                    margin-bottom: 10%;
+                    margin-left: 0;
+                    margin-right: 0;
+                    // height: 45vh;
+                    border-top: 1px solid gray;
+                    padding-top: 20px;
+
+                    &:first-child {
+                        border-top: none;
+                    }
+                }
+
+                h5 {
+                    font-size: 2.2rem;
+                    text-align: center;
+                }
+
+                p {
+                    width: 70%;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    //padding-left: 15%;
+                    // padding-right: 15%;
+
+                    @media @phone{
+                        text-align: center;
+                    }
+                }
+
+                a {
+                    color: @lightblack;
+                    text-decoration: none;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #c65bb4;
+                    }
+                }
+
+                i {
+                    &:hover {
+                        cursor: pointer;
+                        color: #c65bb4;
+                    }
+                }
+                span {
+                    font-size: 1.2rem;
+                }
+
+                .role {
+                    font-style: italic;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                img {
+                    width: 192px;
+                    height: 192px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

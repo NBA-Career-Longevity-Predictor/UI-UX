@@ -19,6 +19,11 @@ body.light-mode {
         background: #fff;
         padding: 0 10px;
     }
+
+    
+    .main-content i, span{
+      color: black;
+    }
 }
 
 body.dark-mode {
@@ -42,6 +47,10 @@ body.dark-mode {
         background: @lighterblack;
         padding: 0 10px;
     }
+
+    .main-content i, span{
+      color: white;
+    }
 }
 
 header {
@@ -59,6 +68,10 @@ header {
     height: 100vh;
 
     .flex(column, space-between, flex-start);
+
+    button:hover {
+        cursor: pointer;
+    }
 
     @media @tablet {
         .flex(column, space-between, flex-start);
