@@ -158,10 +158,10 @@ h2 {
   font-size: 3.8rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 3.8rem;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: 3.8rem;
 }
 p,
 button {
@@ -248,7 +248,7 @@ header {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -285,7 +285,7 @@ header .info {
   top: 0px;
   top: 6vh;
   padding: 2%;
-  margin-top: 6vh;
+  margin: 6vh 0;
   width: 100%;
 }
 @media (max-width: 500px) {
@@ -299,6 +299,14 @@ header .info {
     padding-bottom: 25%;
     background: #000000aa;
   }
+}
+header .subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 2%;
+  top: 90vh;
 }
 header button {
   border: 2px solid white;
@@ -343,17 +351,12 @@ header button:hover {
 .main-content .main-wrap .features,
 .main-content .main-wrap .about,
 .main-content .main-wrap .colors {
+  width: 100%;
+  margin: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-bottom: 100px;
-}
-.main-content .main-wrap .features img,
-.main-content .main-wrap .about img,
-.main-content .main-wrap .colors img {
-  border-radius: 12px;
 }
 @media (max-width: 800px) {
   .main-content .main-wrap .features,
@@ -365,6 +368,16 @@ header button:hover {
     align-items: center;
   }
 }
+.main-content .main-wrap .features p,
+.main-content .main-wrap .about p,
+.main-content .main-wrap .colors p {
+  margin: 20px 10px;
+}
+.main-content .main-wrap .features img,
+.main-content .main-wrap .about img,
+.main-content .main-wrap .colors img {
+  border-radius: 12px;
+}
 .main-content .main-wrap .features .color,
 .main-content .main-wrap .about .color,
 .main-content .main-wrap .colors .color {
@@ -372,7 +385,7 @@ header button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 17%;
+  width: 100%;
   height: 150px;
 }
 .main-content .main-wrap .features .box,
@@ -393,9 +406,9 @@ header button:hover {
   border: 0px;
   font-size: 2rem;
   padding: 10px;
-  width: 200px;
+  width: 250px;
   border-radius: 8px;
-  background: #cd9c4c;
+  background: #CD9C4C;
   color: white;
   -webkit-transition-duration: 0.7s;
   transition-duration: 0.7s;
@@ -403,6 +416,17 @@ header button:hover {
 .main-content .main-wrap .features .box button:hover,
 .main-content .main-wrap .about .box button:hover,
 .main-content .main-wrap .colors .box button:hover {
-  background: #cd9c4ccc;
   cursor: pointer;
+  background: #CD9C4C;
+}
+h3 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 50px 0 25px;
+}
+h3 span {
+  background: #fff;
+  padding: 0 10px;
 }

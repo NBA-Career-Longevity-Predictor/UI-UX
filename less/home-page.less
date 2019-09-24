@@ -17,7 +17,7 @@ header {
     width: 100%;
     height: 100vh;
 
-    .flex(row, space-between, flex-start);
+    .flex(column, space-between, flex-start);
 
     @media @tablet {
         text-align: center;
@@ -43,7 +43,7 @@ header {
 
         top: 6vh;
         padding: 2%;
-        margin-top: 6vh;
+        margin: 6vh 0;
         width: 100%;
 
         @media @phone {
@@ -56,6 +56,13 @@ header {
 
             background: #000000aa;
         }
+    }
+
+    .subtitle{
+      .flex(row, flex-start, flex-end);
+      margin: 2%;
+      top: 90vh;
+      
     }
 
     button {
@@ -100,21 +107,25 @@ header {
         .features,
         .about,
         .colors {
+            width: 100%;
+            margin: 50px;
             .flex(row, space-between, center);
+
+            @media @tablet {
+                .flex(column, space-between, center);
+            }
+
+            p {
+                margin: 20px 10px;
+            }
 
             img {
                 border-radius: 12px;
             }
 
-            @media @tablet {
-                .flex(column, space-between, center);
-            }
-            width: 100%;
-            margin-bottom: 100px;
-
             .color {
                 .flex(row, center, center);
-                width: 17%;
+                width: 100%;
                 height: 150px;
             }
 
@@ -128,24 +139,21 @@ header {
 
                 .flex(column, space-between, center);
 
-                button {
-                    border: 0px;
-                    font-size: 2rem;
-                    padding: 10px;
-                    width: 200px;
-                    border-radius: 8px;
-                    background: #cd9c4c;
-                    color: white;
-
-                    -webkit-transition-duration: 0.7s;
-                    transition-duration: 0.7s;
-                }
-
-                button:hover {
-                    background: #cd9c4ccc;
-                    cursor: pointer;
-                }
+                .button1(@peru, @peru);
             }
         }
     }
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 50px 0 25px;
+}
+
+h3 span {
+    background: #fff;
+    padding: 0 10px;
 }
