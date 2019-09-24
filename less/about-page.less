@@ -1,0 +1,132 @@
+body {
+    color: black;
+    background-color: white;
+  }
+  
+  // .hero {
+  //     .test(red);
+  //     width: 100%;
+  // }
+  
+  header {
+    color: white;
+    // background-color: #27212377;
+    top: 50px;
+    width: 100%;
+  }
+  
+  .main-content {
+    // remove this later
+    padding-top: 100px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    .flex(column, flex-start, center);
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        span {
+            background: #fff;
+            padding: 0 10px;
+        }
+    }
+  
+    .team {
+        width: @containerWidth;
+        .flex(row, space-between, center);
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-top: 100px;
+
+        @media @tablet {
+            .flex(row, space-evenly, center);
+            width: 100%;
+        }
+
+        @media @phone {
+            .flex(column, space-between, center);
+            width: 100%;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+            
+        div {
+            width: 25%;
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-bottom: 10%;
+            
+            height: 50vh;
+            // background-color: #c24f6911;
+            .flex(column, space-between, center);
+
+            @media @tablet {
+                width: 40%;
+                height: 40vh;
+            }
+
+            @media @phone {
+                .flex(column, space-between, center);
+                width: 60%;
+                margin-bottom: 10%;
+                height: 45vh;
+                border-top: 1px solid grey;
+                padding-top: 20px;
+
+                &:first-child {
+                    border-top: none;
+                }
+            }
+
+            h3{
+                font-size: 2.2rem;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+
+            a {
+                color: @lightblack;
+                text-decoration: none;
+
+                &:hover{
+                    cursor: pointer;
+                    color: #C65BB4;
+                }
+            }
+
+            i {
+                &:hover{
+                    cursor: pointer;
+                    color: #C65BB4;
+                }
+            }
+            span {
+                font-size:1.2rem;
+            }
+
+            .role {
+                font-style: italic;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            img {
+                width: 192px;
+                height: 192px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+  
