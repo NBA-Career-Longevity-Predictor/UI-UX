@@ -142,14 +142,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1 {
   font-size: 5rem;
@@ -270,6 +270,10 @@ nav .links {
 }
 nav .dark-mode-button {
   width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 nav .dark-mode-button button {
   border: 0px;
@@ -282,7 +286,7 @@ nav .dark-mode-button button {
 }
 nav i {
   color: white;
-  margin-right: 0px;
+  margin-right: 10px;
 }
 footer {
   display: flex;
@@ -512,7 +516,7 @@ header .subtitle {
   padding: 10px;
   width: 100%;
   border-radius: 8px;
-  background: #CD9C4C;
+  background: #cd9c4c;
   color: white;
   -webkit-transition-duration: 0.7s;
   transition-duration: 0.7s;
@@ -521,7 +525,7 @@ header .subtitle {
 .main-content .main-wrap .about .box button:hover,
 .main-content .main-wrap .colors .box button:hover {
   cursor: pointer;
-  background: #CD9C4C;
+  background: #cd9c4c;
 }
 @media (max-width: 800px) {
   .main-content .main-wrap .features .box button,
