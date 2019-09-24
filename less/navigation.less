@@ -4,25 +4,33 @@ nav {
     height: 6vh;
     z-index: 999;
     background-color: @lightblack;
-    .flex(row, flex-end, center);
+    .flex(row, space-between, center);
     
     @media @tablet {
-        .flex(row, space-evenly, center);
+        .flex(row, space-between, center);
     }
 
     @media @phone {
-        .flex(row, space-evenly, center);
+        .flex(row, space-around, center);
+
+        div{
+            width: 100%;
+        }
+        .logo{
+            display: none;
+        }
     }
     
+    
     a {
+        margin-left: 20px;
         margin-right: 20px;
         text-decoration: none;
         color: white;
         -webkit-transition-duration: 0.7s;
         transition-duration: 0.7s;
 
-        @media @tablet{
-            margin-right: 0px;
+        @media @phone{
         }
     }
 
