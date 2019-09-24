@@ -322,13 +322,6 @@ header button {
   -webkit-transition-duration: 0.7s;
   transition-duration: 0.7s;
 }
-@media (max-width: 800px) {
-  header button {
-    width: 150px;
-    padding: 3px;
-    font-size: 1.6rem;
-  }
-}
 header button:hover {
   border-color: white;
   letter-spacing: 1px;
