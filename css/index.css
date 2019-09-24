@@ -360,6 +360,7 @@ header button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 800px) {
   .main-content .main-wrap .features,
@@ -402,6 +403,8 @@ header button:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  align-self: stretch;
+  flex: 1;
 }
 .main-content .main-wrap .features .box button,
 .main-content .main-wrap .about .box button,
@@ -409,7 +412,7 @@ header button:hover {
   border: 0px;
   font-size: 2rem;
   padding: 10px;
-  width: 250px;
+  width: 100%;
   border-radius: 8px;
   background: #CD9C4C;
   color: white;
@@ -421,6 +424,13 @@ header button:hover {
 .main-content .main-wrap .colors .box button:hover {
   cursor: pointer;
   background: #CD9C4C;
+}
+@media (max-width: 800px) {
+  .main-content .main-wrap .features .box button,
+  .main-content .main-wrap .about .box button,
+  .main-content .main-wrap .colors .box button {
+    width: 50%;
+  }
 }
 h3 {
   width: 100%;

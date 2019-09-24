@@ -112,6 +112,7 @@ header {
             width: 100%;
             margin: 50px;
             .flex(row, space-between, center);
+            flex-wrap: wrap;
 
             @media @tablet {
                 .flex(column, space-between, center);
@@ -138,8 +139,11 @@ header {
                 // background-color: #c24f6911;
                 // border: 1px solid #D9B7BD;
                 border-radius: 12px;
+                
 
                 .flex(column, space-between, center);
+                align-self: stretch;
+                flex: 1;
 
                 .button1(@peru, @peru);
             }
