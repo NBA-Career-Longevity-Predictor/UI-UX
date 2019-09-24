@@ -2,11 +2,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Title</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/5643f8e972.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css" />
-    <script src="script/fixHeight.js"></script>
+    <script src="/script/switch.js" ></script>
+    
 </head>
 <body id="body" class="light-mode">
     <!--[if lt IE 7]>
@@ -22,11 +24,15 @@
                 <div class="logo">
                     <a href="#">Logo</a>
                 </div>
-                <div>
+                <div class="links">
                 <a href="#">Home</a>
                 <a href="#">About</a>                
                 <a href="#">Contact</a>
                 <a href="#">Log In</a>
+                </div>
+
+                <div class="dark-mode-button">
+                <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle Dark Mode"><i class="fas fa-sun"></i></button>
                 </div>
             </nav>
 

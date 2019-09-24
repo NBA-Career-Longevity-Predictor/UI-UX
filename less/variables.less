@@ -9,7 +9,9 @@
 @indianred: #C24F69;
 @thistle: #D9B7BD;
 @lightblack: #272123;
+@lighterblack:#494243;
 @orchid: #C65BB4;
+
 
 
 // Colors
@@ -22,7 +24,10 @@
 
 // Breakpoints
 @phone: ~"(max-width: 500px)";
+@phoneS: ~"(max-width: 375px)";
 @tablet: ~"(max-width: 800px)";
+@desktopS: ~"(max-width: 1000px)";
+
 
 @containerWidth: 80%;
 
@@ -31,5 +36,9 @@
 }
 
 @media @phone{
+    @containerWidth: 100%;
+}
+
+@media @phoneS{
     @containerWidth: 100%;
 }

@@ -1,6 +1,51 @@
-body {
+body.light-mode {
     color: black;
     background-color: white;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        @media @phone {
+            font-size: 2rem;
+            margin: 25px 0 10px;
+        }
+    }
+
+    h3 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    
+}
+
+body.dark-mode {
+    color: white;
+    background-color: @lighterblack;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid white;
+      line-height: 0.1em;
+      margin: 50px 0 25px;
+
+      @media @phone {
+          font-size: 2rem;
+          margin: 25px 0 10px;
+      }
+
+     
+  }
+
+  h3 span {
+      background: @lighterblack;
+      padding: 0 10px;
+  }
 }
 
 header {
@@ -20,12 +65,12 @@ header {
     .flex(column, space-between, flex-start);
 
     @media @tablet {
-        .flex(column, space-between, flex-start);        
+        .flex(column, space-between, flex-start);
     }
 
     @media @phone {
         text-align: center;
-        .flex(column, space-between, center);       
+        .flex(column, space-between, center);
     }
 
     .info {
@@ -43,7 +88,7 @@ header {
             .flex(column, space-evenly, center);
             width: 100%;
             height: 100vh;
-            margin:0;
+            margin: 0;
             margin-top: 6vh;
 
             //CHANGE THIS TO ADJUST TITLE AND BUTTON HEIGHT
@@ -51,41 +96,38 @@ header {
 
             background: #000000aa;
         }
+
+        button {
+            border: 2px solid white;
+            font-size: 2rem;
+            padding: 10px;
+            width: 200px;
+            border-radius: 25px;
+            background: rgba(255, 0, 0, 0);
+            color: white;
+
+            -webkit-transition-duration: 0.7s;
+            transition-duration: 0.7s;
+        }
+
+        button:hover {
+            border-color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
     }
 
-    .subtitle{
-      .flex(row, flex-start, flex-end);
-      margin: 2%;
-      top: 90vh;
+    .subtitle {
+        .flex(row, flex-start, flex-end);
+        margin: 2%;
+        top: 90vh;
 
-      @media @phone{
-        display: none;
-        margin: 0;
-        top: 0;
-        padding: 0;
-      }
-      
-    }
-
-    button {
-        border: 2px solid white;
-        font-size: 2rem;
-        padding: 10px;
-        width: 200px;
-        border-radius: 25px;
-        background: rgba(255, 0, 0, 0);
-        color: white;
-
-        -webkit-transition-duration: 0.7s;
-        transition-duration: 0.7s;
-
-        
-    }
-
-    button:hover {
-        border-color: white;
-        letter-spacing: 1px;
-        cursor: pointer;
+        @media @phone {
+            display: none;
+            margin: 0;
+            top: 0;
+            padding: 0;
+        }
     }
 }
 
@@ -94,8 +136,6 @@ header {
     padding-top: 100px;
 
     width: 100%;
-    background-color: white;
-    color: black;
     .flex(column, center, center);
 
     .main-wrap {
@@ -108,7 +148,10 @@ header {
             width: 100%;
             margin: 50px;
             .flex(row, space-between, center);
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            @media @desktopS {
+                flex-wrap: wrap;
+            }
 
             @media @tablet {
                 .flex(column, space-between, center);
@@ -124,6 +167,7 @@ header {
 
             .color {
                 .flex(row, center, center);
+
                 width: 100%;
                 height: 150px;
             }
@@ -135,7 +179,6 @@ header {
                 // background-color: #c24f6911;
                 // border: 1px solid #D9B7BD;
                 border-radius: 12px;
-                
 
                 .flex(column, space-between, center);
                 align-self: stretch;
@@ -145,17 +188,4 @@ header {
             }
         }
     }
-}
-
-h3 {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    line-height: 0.1em;
-    margin: 50px 0 25px;
-}
-
-h3 span {
-    background: #fff;
-    padding: 0 10px;
 }
