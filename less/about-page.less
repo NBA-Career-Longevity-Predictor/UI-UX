@@ -1,59 +1,4 @@
-body.light-mode {
-    color: black;
-    background-color: white;
 
-    h3 {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1.5px solid #494243b2;
-        border-top: 2px solid #C65BB4;
-        line-height: 0.1em;
-        margin: 50px 0 25px;
-
-        @media @phone {
-            font-size: 2rem;
-            margin: 25px 0 10px;
-        }
-    }
-
-    h3 span {
-        background: #fff;
-        padding: 0 10px;
-    }
-
-    .main-content i,
-    span {
-        color: black;
-    }
-}
-
-body.dark-mode {
-    color: white;
-    background-color: @lighterblack;
-
-    h3 {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid white;
-        line-height: 0.1em;
-        margin: 50px 0 25px;
-
-        @media @phone {
-            font-size: 2rem;
-            margin: 25px 0 10px;
-        }
-    }
-
-    h3 span {
-        background: @lighterblack;
-        padding: 0 10px;
-    }
-
-    .main-content i,
-    span {
-        color: white;
-    }
-}
 
 header {
     .info {
@@ -63,25 +8,9 @@ header {
 }
 
 .main-content {
-    // remove this later
     padding-top: 100px;
     width: 100%;
     .flex(column, flex-start, center);
-
-    
-
-    // h3 {
-    //     width: 100%;
-    //     text-align: center;
-    //     border-bottom: 1px solid #000;
-    //     line-height: 0.1em;
-    //     margin: 50px 0 25px;
-
-    //     span {
-    //         background: #fff;
-    //         padding: 0 10px;
-    //     }
-    // }
 
     .main-wrap {
         width: @containerWidth;
@@ -120,6 +49,7 @@ header {
 
             .box {
                 width: 41%;
+                // background: rgba(205, 156, 76, 0.212);
                 background: rgba(248, 180, 238, 0.116);
                 border-radius: 10px;
                 box-shadow: 0 4px 8px 0 @lightblack;
@@ -127,12 +57,7 @@ header {
                 margin-left: 4%;
                 margin-right: 4%;
                 margin-bottom: 10%;
-                //background: rgba(217, 183, 189, 0.274);
-                //border-radius: 10px;
 
-                // height: 50vh;
-
-                // background-color: #c24f6911;
                 .flex(column, space-between, center);
 
                 align-self: stretch;
@@ -144,11 +69,25 @@ header {
 
                 .bio {
                     height: 100%;
+
+                    .fa-facebook-square {
+                        color: #3B5998;
+
+                        &:hover{
+                            color: @peru;
+                        }
+                    }
+                    .fa-twitter-square {
+                        color: #55ACEE;
+
+                        &:hover{
+                            color: @peru;
+                        }
+                    }
                 }
 
                 @media @tablet {
                     width: 40%;
-                    // height: 40vh;
                 }
 
                 @media @phone {
@@ -157,7 +96,6 @@ header {
                     margin-bottom: 10%;
                     margin-left: 0;
                     margin-right: 0;
-                    // height: 45vh;
                     border-top: 1px solid gray;
                     padding-top: 20px;
                     background: none;
@@ -187,14 +125,14 @@ header {
 
                     &:hover {
                         cursor: pointer;
-                        color: #c65bb4;
+                        color: @peru;
                     }
                 }
 
                 i {
                     &:hover {
                         cursor: pointer;
-                        color: #c65bb4;
+                        color: @peru;
                     }
                 }
                 span {

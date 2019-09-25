@@ -305,7 +305,8 @@ body.light-mode {
 body.light-mode h3 {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1.5px solid #4942439a;
+  border-top: 2px solid #cd9c4c;
   line-height: 0.1em;
   margin: 50px 0 25px;
 }
@@ -319,9 +320,13 @@ body.light-mode h3 span {
   background: #fff;
   padding: 0 10px;
 }
-body.light-mode .main-content i,
-body.light-mode span {
+body.light-mode .main-content .box i,
+body.light-mode .main-content .box span {
   color: black;
+}
+body.light-mode .main-content .box i:hover,
+body.light-mode .main-content .box span:hover {
+  color: #cd9c4c;
 }
 body.dark-mode {
   color: white;
@@ -330,7 +335,8 @@ body.dark-mode {
 body.dark-mode h3 {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid white;
+  border-bottom: 1.5px solid #ffffff99;
+  border-top: 2px solid white;
   line-height: 0.1em;
   margin: 50px 0 25px;
 }
@@ -344,9 +350,13 @@ body.dark-mode h3 span {
   background: #494243;
   padding: 0 10px;
 }
-body.dark-mode .main-content i,
-body.dark-mode span {
-  color: white;
+body.dark-mode .main-content .box i,
+body.dark-mode .main-content .box span {
+  color: white !important;
+}
+body.dark-mode .main-content .box i:hover,
+body.dark-mode .main-content .box span:hover {
+  color: #cd9c4c !important;
 }
 header {
   color: white;
@@ -490,11 +500,6 @@ header .subtitle {
 .main-content .main-wrap .colors p {
   margin: 20px 10px;
 }
-.main-content .main-wrap .features img,
-.main-content .main-wrap .about img,
-.main-content .main-wrap .colors img {
-  border-radius: 12px;
-}
 .main-content .main-wrap .features .color,
 .main-content .main-wrap .about .color,
 .main-content .main-wrap .colors .color {
@@ -522,10 +527,10 @@ header .subtitle {
 .main-content .main-wrap .features .box button,
 .main-content .main-wrap .about .box button,
 .main-content .main-wrap .colors .box button {
-  border: 0px;
-  font-size: 2rem;
+  border: 1px solid #2721239d;
+  font-size: 1.4rem;
   padding: 10px;
-  width: 100%;
+  width: 70%;
   border-radius: 8px;
   background: #cd9c4c;
   color: white;
@@ -545,56 +550,137 @@ header .subtitle {
     width: 50%;
   }
 }
-body.light-mode {
-  color: black;
-  background-color: white;
-}
-body.light-mode h3 {
+.main-content .main-wrap .features .box .view,
+.main-content .main-wrap .about .box .view,
+.main-content .main-wrap .colors .box .view {
   width: 100%;
+  float: left;
+  border: 5px solid #cd9c4c;
+  overflow: hidden;
+  position: relative;
   text-align: center;
-  border-bottom: 1.5px solid #494243b2;
-  border-top: 2px solid #C65BB4;
-  line-height: 0.1em;
-  margin: 50px 0 25px;
+  cursor: default;
+  border-radius: 12px;
 }
-@media (max-width: 500px) {
-  body.light-mode h3 {
-    font-size: 2rem;
-    margin: 25px 0 10px;
-  }
-}
-body.light-mode h3 span {
-  background: #fff;
-  padding: 0 10px;
-}
-body.light-mode .main-content i,
-body.light-mode span {
-  color: black;
-}
-body.dark-mode {
-  color: white;
-  background-color: #494243;
-}
-body.dark-mode h3 {
+.main-content .main-wrap .features .box .view .mask,
+.main-content .main-wrap .about .box .view .mask,
+.main-content .main-wrap .colors .box .view .mask,
+.main-content .main-wrap .features .box .view .content,
+.main-content .main-wrap .about .box .view .content,
+.main-content .main-wrap .colors .box .view .content {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.main-content .main-wrap .features .box .view img,
+.main-content .main-wrap .about .box .view img,
+.main-content .main-wrap .colors .box .view img {
+  display: block;
+  position: relative;
+}
+.main-content .main-wrap .features .box .view h2,
+.main-content .main-wrap .about .box .view h2,
+.main-content .main-wrap .colors .box .view h2 {
+  text-transform: uppercase;
+  color: #fff;
   text-align: center;
-  border-bottom: 1px solid white;
-  line-height: 0.1em;
-  margin: 50px 0 25px;
+  position: relative;
+  font-size: 1.8rem;
+  padding: 10px;
+  background: #272123a6;
+  margin: 20px 0 0 0;
 }
-@media (max-width: 500px) {
-  body.dark-mode h3 {
-    font-size: 2rem;
-    margin: 25px 0 10px;
-  }
+.main-content .main-wrap .features .box .view p,
+.main-content .main-wrap .about .box .view p,
+.main-content .main-wrap .colors .box .view p {
+  font-size: 1.4rem;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 20px;
+  text-align: center;
 }
-body.dark-mode h3 span {
-  background: #494243;
-  padding: 0 10px;
+.main-content .main-wrap .features .box .view a.info,
+.main-content .main-wrap .about .box .view a.info,
+.main-content .main-wrap .colors .box .view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
 }
-body.dark-mode .main-content i,
-body.dark-mode span {
-  color: white;
+.main-content .main-wrap .features .box .view a.info:hover,
+.main-content .main-wrap .about .box .view a.info:hover,
+.main-content .main-wrap .colors .box .view a.info:hover {
+  box-shadow: 0 0 5px #000;
+}
+.main-content .main-wrap .features .box .view-first img,
+.main-content .main-wrap .about .box .view-first img,
+.main-content .main-wrap .colors .box .view-first img {
+  transition: all 0.2s linear;
+}
+.main-content .main-wrap .features .box .view-first .mask,
+.main-content .main-wrap .about .box .view-first .mask,
+.main-content .main-wrap .colors .box .view-first .mask {
+  opacity: 0;
+  background-color: rgba(219, 127, 8, 0.7);
+  transition: all 0.4s ease-in-out;
+}
+.main-content .main-wrap .features .box .view-first h2,
+.main-content .main-wrap .about .box .view-first h2,
+.main-content .main-wrap .colors .box .view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.main-content .main-wrap .features .box .view-first p,
+.main-content .main-wrap .about .box .view-first p,
+.main-content .main-wrap .colors .box .view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.main-content .main-wrap .features .box .view-first a.info,
+.main-content .main-wrap .about .box .view-first a.info,
+.main-content .main-wrap .colors .box .view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.main-content .main-wrap .features .box .view-first:hover img,
+.main-content .main-wrap .about .box .view-first:hover img,
+.main-content .main-wrap .colors .box .view-first:hover img {
+  transform: scale(1.1);
+}
+.main-content .main-wrap .features .box .view-first:hover .mask,
+.main-content .main-wrap .about .box .view-first:hover .mask,
+.main-content .main-wrap .colors .box .view-first:hover .mask {
+  opacity: 1;
+}
+.main-content .main-wrap .features .box .view-first:hover h2,
+.main-content .main-wrap .about .box .view-first:hover h2,
+.main-content .main-wrap .colors .box .view-first:hover h2,
+.main-content .main-wrap .features .box .view-first:hover p,
+.main-content .main-wrap .about .box .view-first:hover p,
+.main-content .main-wrap .colors .box .view-first:hover p,
+.main-content .main-wrap .features .box .view-first:hover a.info,
+.main-content .main-wrap .about .box .view-first:hover a.info,
+.main-content .main-wrap .colors .box .view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.main-content .main-wrap .features .box .view-first:hover p,
+.main-content .main-wrap .about .box .view-first:hover p,
+.main-content .main-wrap .colors .box .view-first:hover p {
+  transition-delay: 0.1s;
+}
+.main-content .main-wrap .features .box .view-first:hover a.info,
+.main-content .main-wrap .about .box .view-first:hover a.info,
+.main-content .main-wrap .colors .box .view-first:hover a.info {
+  transition-delay: 0.2s;
 }
 header {
   height: 100%;
@@ -684,6 +770,18 @@ header .info {
 .main-content .main-wrap .team .box .bio {
   height: 100%;
 }
+.main-content .main-wrap .team .box .bio .fa-facebook-square {
+  color: #3B5998;
+}
+.main-content .main-wrap .team .box .bio .fa-facebook-square:hover {
+  color: #cd9c4c;
+}
+.main-content .main-wrap .team .box .bio .fa-twitter-square {
+  color: #55ACEE;
+}
+.main-content .main-wrap .team .box .bio .fa-twitter-square:hover {
+  color: #cd9c4c;
+}
 @media (max-width: 800px) {
   .main-content .main-wrap .team .box {
     width: 40%;
@@ -725,11 +823,11 @@ header .info {
 }
 .main-content .main-wrap .team .box a:hover {
   cursor: pointer;
-  color: #c65bb4;
+  color: #cd9c4c;
 }
 .main-content .main-wrap .team .box i:hover {
   cursor: pointer;
-  color: #c65bb4;
+  color: #cd9c4c;
 }
 .main-content .main-wrap .team .box span {
   font-size: 1.2rem;
