@@ -11,6 +11,9 @@ body.light-mode {
         line-height: 0.1em;
         margin: 50px 0 25px;
 
+        @media @tablet {
+            font-size: 3rem;
+        }
         @media @phone {
             font-size: 2rem;
             margin: 25px 0 10px;
@@ -174,11 +177,17 @@ header {
             .flex(row, space-between, center);
             flex-wrap: nowrap;
             @media @desktopS {
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
+                .flex(column, space-between, center);
+                width: 70%;
             }
 
             @media @tablet {
                 .flex(column, space-between, center);
+            }
+
+            @media @phone {
+                width: 100%;
             }
 
             p {
@@ -205,6 +214,7 @@ header {
                 .button1(@peru, @peru);
 
                 //FEATURES BOXES CSS ANIMATION
+
                 .view {
                     width: 100%;
                     float: left;

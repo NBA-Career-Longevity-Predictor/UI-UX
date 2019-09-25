@@ -1,5 +1,3 @@
-
-
 header {
     .info {
         display: none;
@@ -14,8 +12,8 @@ header {
 
     .main-wrap {
         width: @containerWidth;
-        
 
+        //main content effects on tablet and phone view
         @media @tablet {
             width: 80%;
         }
@@ -24,6 +22,7 @@ header {
             width: 80%;
         }
 
+        // All team members' cards -- used specific width setting and flex wrap to have design of two cards per line
         .team {
             width: @containerWidth;
             .flex(row, space-between, center);
@@ -35,6 +34,7 @@ header {
                 .flex(row, center, center);
             }
 
+            //all team card effects on tablet and phone view
             @media @tablet {
                 .flex(row, space-evenly, center);
                 width: 100%;
@@ -47,9 +47,9 @@ header {
                 margin-top: 50px;
             }
 
+            // each team member's specific card set to flex column to allow items within the card to line up in a column
             .box {
                 width: 41%;
-                // background: rgba(205, 156, 76, 0.212);
                 background: rgba(248, 180, 238, 0.116);
                 border-radius: 10px;
                 box-shadow: 0 4px 8px 0 @lightblack;
@@ -57,11 +57,10 @@ header {
                 margin-left: 4%;
                 margin-right: 4%;
                 margin-bottom: 10%;
-
                 .flex(column, space-between, center);
-
                 align-self: stretch;
 
+                // set up two divs within each card to allow separation of image, title and bio
                 div {
                     .flex(column, space-between, center);
                     width: 100%;
@@ -70,22 +69,24 @@ header {
                 .bio {
                     height: 100%;
 
+                    // color settings for social media icons in each card
                     .fa-facebook-square {
-                        color: #3B5998;
+                        color: #3b5998;
 
-                        &:hover{
+                        &:hover {
                             color: @peru;
                         }
                     }
                     .fa-twitter-square {
-                        color: #55ACEE;
+                        color: #55acee;
 
-                        &:hover{
+                        &:hover {
                             color: @peru;
                         }
                     }
                 }
 
+                // card effects on tablet and phone view
                 @media @tablet {
                     width: 40%;
                 }
@@ -138,6 +139,7 @@ header {
                 span {
                     font-size: 1.2rem;
 
+                    //icon effects within the card on tablet and phone view
                     @media @phone {
                         margin-top: 5%;
                     }
