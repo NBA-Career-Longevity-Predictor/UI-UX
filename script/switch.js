@@ -1,7 +1,15 @@
 var body = document.getElementById("body");
 var currentClass = body.className;
-currentClass = sessionStorage.getItem("toggle");
+console.log()
+if(sessionStorage.getItem("toggle") != null){
+    currentClass = sessionStorage.getItem("toggle");
+}
+else{
+    sessionStorage.setItem("toggle", "light-mode");
+}
 body.className = currentClass;
+
+console.log(`Page loaded. className is ${currentClass}.`);
 
 function toggleDarkLight() {
     console.log(`Before switching the toggle value is: ${sessionStorage.getItem("toggle")}`);
