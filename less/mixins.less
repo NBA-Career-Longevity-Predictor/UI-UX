@@ -1,39 +1,47 @@
 // Mixins in here
 
-.flex(@direction: row, @justify: center, @align: center){
+.flex(@direction: row, @justify: center, @align: center) {
     display: flex;
     flex-direction: @direction;
     justify-content: @justify;
     align-items: @align;
 }
 
-.flexitem{
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-      min-width: 0;
+.flexitem {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
 }
 
-.test(@color: red){
+.test(@color: red) {
     border: 1px solid @color !important;
 }
 
-
-.buttonA(){
-    width: 80%;
+.button1(@bgcolor: white, @hovercolor: white) {
+  button{
     border: 0px;
-    border-radius: 12px;
+    font-size: 2rem;
     padding: 10px;
-    background-color: @button-color;
-    color: @white;
-    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 8px;
+    background: @bgcolor;
+    color: white;
+
+    -webkit-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+
+    &:hover {
+        cursor: pointer;
+        background: @hovercolor;
+    }
 
     @media @tablet{
-        width: 50%;
-      }
-      @media @mobile{              
-        width: 100%; 
-      }
+      width: 50%;
+    }
+    @media @phone{
+    }
+  }
 }

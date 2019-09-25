@@ -1,36 +1,201 @@
-body{
-  color: @lightcolor;
+body.light-mode {
+    color: black;
+    background-color: white;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        @media @phone {
+            font-size: 2rem;
+            margin: 25px 0 10px;
+        }
+    }
+
+    h3 span {
+        background: #fff;
+        padding: 0 10px;
+    }
+
+    .main-content i,
+    span {
+        color: black;
+    }
 }
 
-.hero {
-    position: absolute;
-    top: 0;
-    z-index: -1;
+body.dark-mode {
+    color: white;
+    background-color: @lighterblack;
+
+    h3 {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid white;
+        line-height: 0.1em;
+        margin: 50px 0 25px;
+
+        @media @phone {
+            font-size: 2rem;
+            margin: 25px 0 10px;
+        }
+    }
+
+    h3 span {
+        background: @lighterblack;
+        padding: 0 10px;
+    }
+
+    .main-content i,
+    span {
+        color: white;
+    }
+}
+
+header {
+    color: white;
+
+    background-color: #27212377;
+    background-image: url("/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    top: 6vh;
     width: 100%;
+    height: 100vh;
+
+    .flex(column, space-between, flex-start);
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    @media @tablet {
+        .flex(column, space-between, flex-start);
+    }
+
+    @media @phone {
+        text-align: center;
+        .flex(column, space-between, center);
+    }
+
+    .info {
+        .flex(row, space-between, flex-start);
+
+        position: sticky;
+        top: 0px;
+
+        top: 6vh;
+        padding: 2%;
+        margin: 6vh 0;
+        width: 100%;
+
+        @media @phone {
+            .flex(column, space-evenly, center);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            margin-top: 6vh;
+
+            //CHANGE THIS TO ADJUST TITLE AND BUTTON HEIGHT
+            padding-bottom: 25%;
+
+            background: #000000aa;
+        }
+
+        button {
+            border: 2px solid white;
+            font-size: 2rem;
+            padding: 10px;
+            width: 200px;
+            border-radius: 25px;
+            background: rgba(255, 0, 0, 0);
+            color: white;
+
+            -webkit-transition-duration: 0.7s;
+            transition-duration: 0.7s;
+        }
+
+        button:hover {
+            border-color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+    }
+
+    .subtitle {
+        .flex(row, flex-start, flex-end);
+        margin: 2%;
+        top: 90vh;
+
+        @media @phone {
+            display: none;
+            margin: 0;
+            top: 0;
+            padding: 0;
+        }
+    }
 }
 
-header{
-  padding: 2%;
-  .flex(row, space-between, center);
+.main-content {
+    // remove this later
+    padding-top: 100px;
 
+    width: 100%;
+    .flex(column, center, center);
 
-  button{
-    border: 2px solid @lightcolor;
-    font-size: 2rem;
-    padding: 10px;
-    width: 200px;
-    border-radius: 25px;
-    background: rgba(255, 0, 0, 0);
-    color: @lightcolor;
+    .main-wrap {
+        width: @containerWidth;
+        .flex(column, center, center);
 
-    -webkit-transition-duration: 0.7s; /* Safari */
-    transition-duration: 0.7s;
-  }
+        .features,
+        .about,
+        .colors {
+            width: 100%;
+            margin: 50px;
+            .flex(row, space-between, center);
+            flex-wrap: nowrap;
+            @media @desktopS {
+                flex-wrap: wrap;
+            }
 
-  button:hover{
-    border-color: rgba(204,132,0,.9); /* Green */
-    background-color: rgba(255,255,255,.1);
-    
-    letter-spacing: 3px;
-  }
+            @media @tablet {
+                .flex(column, space-between, center);
+            }
+
+            p {
+                margin: 20px 10px;
+            }
+
+            img {
+                border-radius: 12px;
+            }
+
+            .color {
+                .flex(row, center, center);
+
+                width: 100%;
+                height: 150px;
+            }
+
+            .box {
+                width: 100%;
+                margin: 10px;
+                padding: 10px;
+                // background-color: #c24f6911;
+                // border: 1px solid #D9B7BD;
+                border-radius: 12px;
+
+                .flex(column, space-between, center);
+                align-self: stretch;
+                flex: 1;
+
+                .button1(@peru, @peru);
+            }
+        }
+    }
 }

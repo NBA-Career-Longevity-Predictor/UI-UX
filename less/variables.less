@@ -1,22 +1,37 @@
+// Color assignments
+@orange: #951802;
+@black: #050006;
+@yellow: #fbeb5d;
 
-// Color assignments 
-
-
-
+// Neon color assignments
+@peru: #cd9c4c;
+@indianred: #c24f69;
+@thistle: #d9b7bd;
+@lightblack: #272123;
+@lighterblack: #494243;
+@orchid: #c65bb4;
 
 // Colors
-@lightcolor: #EFF6EE;
-@maincolor: #17408B;
-@maincolor2: #C9082A;
-@darkcolor: #273043;
-@darkcolor2: #9197AE;
-
+@main1: @orange;
 
 //
-@containerWidth: 1200px;
-
-
 
 // Breakpoints
-@mobile: ~"(max-width: 500px)";
-@tablet: ~"(max-width: 768px)";
+@phone: ~"(max-width: 500px)";
+@phoneS: ~"(max-width: 375px)";
+@tablet: ~"(max-width: 800px)";
+@desktopS: ~"(max-width: 1000px)";
+
+@containerWidth: 80%;
+
+@media @tablet {
+    @containerWidth: 100%;
+}
+
+@media @phone {
+    @containerWidth: 100%;
+}
+
+@media @phoneS {
+    @containerWidth: 100%;
+}
