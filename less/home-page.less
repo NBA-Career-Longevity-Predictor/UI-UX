@@ -86,10 +86,6 @@ header {
 
     .flex(column, space-between, flex-start);
 
-    button:hover {
-        cursor: pointer;
-    }
-
     @media @tablet {
         .flex(column, space-between, flex-start);
     }
@@ -168,6 +164,30 @@ header {
     .main-wrap {
         width: @containerWidth;
         .flex(column, center, center);
+
+        #contact {
+            width: 40%;
+            background: rgba(248, 180, 238, 0.116);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 @lightblack;
+            padding: 3%;
+            margin: 50px 0;
+            margin-left: 4%;
+            margin-right: 4%;
+
+
+
+            @media @desktopS {
+                width: 60%;
+            }
+
+            @media @tablet {
+                width: 60%;
+            }
+            @media @phone{
+                width: 80%;
+            }
+        }
 
         .features,
         .about,
@@ -310,6 +330,37 @@ header {
                     transition-delay: 0.2s;
                 }
             }
+        }
+
+        form {
+            width: 100%;
+            .flex(column, flex-start, flex-start);
+        }
+        input,
+        label,
+        textarea {
+            font-family: "Roboto", sans-serif;
+
+            font-size: 1.6rem;
+            max-width: 100%;
+            width: 100%;
+            margin: 4% 0;
+        }
+        input,
+        textarea {
+            border: none;
+            border-bottom: 3px solid #cd9c4c;
+            background-color: rgba(205, 156, 76, 0.178);
+
+            &:hover {
+                cursor: text;
+            }
+        }
+
+        #contactbutton {
+            align-self: center;
+            width: 50%;
+            height: 2em;
         }
     }
 }

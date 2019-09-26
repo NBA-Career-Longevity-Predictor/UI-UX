@@ -152,7 +152,7 @@ h5 {
   font-family: "Roboto", sans-serif;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 h2 {
   font-size: 3.8rem;
@@ -379,9 +379,6 @@ header {
   justify-content: space-between;
   align-items: flex-start;
 }
-header button:hover {
-  cursor: pointer;
-}
 @media (max-width: 800px) {
   header {
     display: flex;
@@ -471,6 +468,31 @@ header .subtitle {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.main-content .main-wrap #contact {
+  width: 40%;
+  background: rgba(248, 180, 238, 0.116);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #272123;
+  padding: 3%;
+  margin: 50px 0;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+@media (max-width: 1000px) {
+  .main-content .main-wrap #contact {
+    width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .main-content .main-wrap #contact {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .main-content .main-wrap #contact {
+    width: 80%;
+  }
 }
 .main-content .main-wrap .features,
 .main-content .main-wrap .about,
@@ -698,6 +720,37 @@ header .subtitle {
 .main-content .main-wrap .about .box .view-first:hover a.info,
 .main-content .main-wrap .colors .box .view-first:hover a.info {
   transition-delay: 0.2s;
+}
+.main-content .main-wrap form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main-content .main-wrap input,
+.main-content .main-wrap label,
+.main-content .main-wrap textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  max-width: 100%;
+  width: 100%;
+  margin: 4% 0;
+}
+.main-content .main-wrap input,
+.main-content .main-wrap textarea {
+  border: none;
+  border-bottom: 3px solid #cd9c4c;
+  background-color: rgba(205, 156, 76, 0.178);
+}
+.main-content .main-wrap input:hover,
+.main-content .main-wrap textarea:hover {
+  cursor: text;
+}
+.main-content .main-wrap #contactbutton {
+  align-self: center;
+  width: 50%;
+  height: 2em;
 }
 header {
   height: 100%;
