@@ -1,60 +1,3 @@
-body.light-mode {
-    color: black;
-    background-color: white;
-
-    h3 {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1.5px solid #494243b2;
-        border-top: 2px solid #C65BB4;
-        line-height: 0.1em;
-        margin: 50px 0 25px;
-
-        @media @phone {
-            font-size: 2rem;
-            margin: 25px 0 10px;
-        }
-    }
-
-    h3 span {
-        background: #fff;
-        padding: 0 10px;
-    }
-
-    .main-content i,
-    span {
-        color: black;
-    }
-}
-
-body.dark-mode {
-    color: white;
-    background-color: @lighterblack;
-
-    h3 {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid white;
-        line-height: 0.1em;
-        margin: 50px 0 25px;
-
-        @media @phone {
-            font-size: 2rem;
-            margin: 25px 0 10px;
-        }
-    }
-
-    h3 span {
-        background: @lighterblack;
-        padding: 0 10px;
-    }
-
-    .main-content i,
-    span {
-        color: white;
-    }
-}
-
 header {
     .info {
         display: none;
@@ -63,30 +6,14 @@ header {
 }
 
 .main-content {
-    // remove this later
     padding-top: 100px;
     width: 100%;
     .flex(column, flex-start, center);
 
-    
-
-    // h3 {
-    //     width: 100%;
-    //     text-align: center;
-    //     border-bottom: 1px solid #000;
-    //     line-height: 0.1em;
-    //     margin: 50px 0 25px;
-
-    //     span {
-    //         background: #fff;
-    //         padding: 0 10px;
-    //     }
-    // }
-
     .main-wrap {
         width: @containerWidth;
-        
 
+        //main content effects on tablet and phone view
         @media @tablet {
             width: 80%;
         }
@@ -95,6 +22,7 @@ header {
             width: 80%;
         }
 
+        // All team members' cards -- used specific width setting and flex wrap to have design of two cards per line
         .team {
             width: @containerWidth;
             .flex(row, space-between, center);
@@ -106,6 +34,7 @@ header {
                 .flex(row, center, center);
             }
 
+            //all team card effects on tablet and phone view
             @media @tablet {
                 .flex(row, space-evenly, center);
                 width: 100%;
@@ -118,6 +47,7 @@ header {
                 margin-top: 50px;
             }
 
+            // each team member's specific card set to flex column to allow items within the card to line up in a column
             .box {
                 width: 41%;
                 background: rgba(248, 180, 238, 0.116);
@@ -127,16 +57,10 @@ header {
                 margin-left: 4%;
                 margin-right: 4%;
                 margin-bottom: 10%;
-                //background: rgba(217, 183, 189, 0.274);
-                //border-radius: 10px;
-
-                // height: 50vh;
-
-                // background-color: #c24f6911;
                 .flex(column, space-between, center);
-
                 align-self: stretch;
 
+                // set up two divs within each card to allow separation of image, title and bio
                 div {
                     .flex(column, space-between, center);
                     width: 100%;
@@ -144,11 +68,27 @@ header {
 
                 .bio {
                     height: 100%;
+
+                    // color settings for social media icons in each card
+                    .fa-facebook-square {
+                        color: #3b5998;
+
+                        &:hover {
+                            color: @peru;
+                        }
+                    }
+                    .fa-twitter-square {
+                        color: #55acee;
+
+                        &:hover {
+                            color: @peru;
+                        }
+                    }
                 }
 
+                // card effects on tablet and phone view
                 @media @tablet {
                     width: 40%;
-                    // height: 40vh;
                 }
 
                 @media @phone {
@@ -157,7 +97,6 @@ header {
                     margin-bottom: 10%;
                     margin-left: 0;
                     margin-right: 0;
-                    // height: 45vh;
                     border-top: 1px solid gray;
                     padding-top: 20px;
                     background: none;
@@ -187,19 +126,20 @@ header {
 
                     &:hover {
                         cursor: pointer;
-                        color: #c65bb4;
+                        color: @peru;
                     }
                 }
 
                 i {
                     &:hover {
                         cursor: pointer;
-                        color: #c65bb4;
+                        color: @peru;
                     }
                 }
                 span {
                     font-size: 1.2rem;
 
+                    //icon effects within the card on tablet and phone view
                     @media @phone {
                         margin-top: 5%;
                     }

@@ -1,47 +1,47 @@
 // Mixins in here
 
 .flex(@direction: row, @justify: center, @align: center) {
-    display: flex;
-    flex-direction: @direction;
-    justify-content: @justify;
-    align-items: @align;
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
 }
 
 .flexitem {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    min-width: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .test(@color: red) {
-    border: 1px solid @color !important;
+  border: 1px solid @color !important;
 }
 
 .button1(@bgcolor: white, @hovercolor: white) {
-  button{
-    border: 0px;
-    font-size: 2rem;
-    padding: 10px;
-    width: 100%;
-    border-radius: 8px;
-    background: @bgcolor;
-    color: white;
+  button {
+      border: 1px solid #2721239d;
+      font-size: 1.4rem;
+      padding: 10px;
+      width: 70%;
+      border-radius: 8px;
+      background: @bgcolor;
+      color: white;
 
-    -webkit-transition-duration: 0.7s;
-    transition-duration: 0.7s;
+      -webkit-transition-duration: 0.7s;
+      transition-duration: 0.7s;
 
-    &:hover {
-        cursor: pointer;
-        background: @hovercolor;
-    }
+      &:hover {
+          cursor: pointer;
+          background: @hovercolor;
+      }
 
-    @media @tablet{
-      width: 50%;
-    }
-    @media @phone{
-    }
+      @media @tablet {
+          width: 50%;
+      }
+      @media @phone {
+      }
   }
 }
