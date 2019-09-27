@@ -33,7 +33,4 @@ function toggleDarkLight() {
         sessionStorage.setItem("toggle", "light-mode");
         currentClass = body.className;
     }
-
-    // console.log(`Current class is: ${currentClass}`);
-    // console.log(`After switching the toggle value is: ${sessionStorage.getItem("toggle")}`);
 }
